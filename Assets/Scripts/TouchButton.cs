@@ -14,14 +14,15 @@ public class TouchButton : MonoBehaviour
     // Track if the button is currently pressed
     private bool isPressed = false;
 
-    private PointManager pointManager;
+    public PointManager pointManager;
+    public AudioManager audioManager;
 
     void Start()
     {
         // Get the collider and sprite renderer attached to this GameObject
         buttonCollider = GetComponent<Collider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        audioManager = FindObjectOfType<AudioManager>();
         pointManager = FindObjectOfType<PointManager>();
     }
 
@@ -65,6 +66,7 @@ public class TouchButton : MonoBehaviour
             if (spriteRenderer.color == Color.red)
             {
                 pointManager.UpdateScore(1);
+                audioManager.redSquaresTotal--;
             }
             else
             {
