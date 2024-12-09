@@ -799,7 +799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -591}
+  m_AnchoredPosition: {x: 0, y: -527}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354819770
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 444708425}
   - component: {fileID: 444708424}
   m_Layer: 5
-  m_Name: Banner
+  m_Name: BannerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1043,9 +1043,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 599426964}
-        m_TargetAssemblyTypeName: InterstitialAdExample, Assembly-CSharp
-        m_MethodName: ShowAd
+      - m_Target: {fileID: 599426966}
+        m_TargetAssemblyTypeName: BannerAdExample, Assembly-CSharp
+        m_MethodName: LoadBanner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1110,7 +1110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -459}
+  m_AnchoredPosition: {x: 0, y: -607}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &468598192
@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Banner
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1720,8 +1720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ddd8bc98415eb40b9cf85fa453b229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _androidAdUnitId: Interstitial_Android
-  _iOsAdUnitId: Interstitial_iOS
+  _androidAdUnitId: 5713008
+  _iOsAdUnitId: 5713009
 --- !u!114 &599426965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1734,8 +1734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b39210f77a22f5409c5090f8cdd2e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _androidAdUnitId: Interstitial_Android
-  _iOsAdUnitId: Interstitial_iOS
+  _androidGameId: 5713008
+  _testMode: 1
 --- !u!114 &599426966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,9 +1751,9 @@ MonoBehaviour:
   _loadBannerButton: {fileID: 444708424}
   _showBannerButton: {fileID: 444708424}
   _hideBannerButton: {fileID: 444708424}
-  _bannerPosition: 4
-  _androidAdUnitId: Banner_Android
-  _iOSAdUnitId: Banner_iOS
+  _bannerPosition: 6
+  _androidAdUnitId: 5713008
+  _iOSAdUnitId: 5713009
 --- !u!1 &601464080
 GameObject:
   m_ObjectHideFlags: 0

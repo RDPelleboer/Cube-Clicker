@@ -72,7 +72,7 @@ public class TouchButton : MonoBehaviour
                 pointManager.EndMenu();
             }
             spriteRenderer.color = touchBeganColour; // Change the color when touched
-            Debug.Log("Touch began on button: " + gameObject.name); // Optional debug log
+            //Debug.Log("Touch began on button: " + gameObject.name); // Optional debug log
             // Add your logic for touch input here (e.g., jumping, shooting, etc.)
         }
     }
@@ -81,7 +81,7 @@ public class TouchButton : MonoBehaviour
     {
         isPressed = false; // Reset pressed state
         spriteRenderer.color = touchEndedColour; // Change the color back when touch ends
-        Debug.Log("Touch ended on button: " + gameObject.name); // Optional debug log
+        //.Log("Touch ended on button: " + gameObject.name); // Optional debug log
         // Add your logic for when the touch ends
     }
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Advertisements;
 
+#if UNITY_ANDROID || UNITY_IOS || UNITY_EDITOR // Ensure this script is only compiled for supported platforms
 public class InterstitialAdExample : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
     [SerializeField] string _androidAdUnitId = "Interstitial_Android";
@@ -9,7 +10,7 @@ public class InterstitialAdExample : MonoBehaviour, IUnityAdsLoadListener, IUnit
 
     void Awake()
     {
-        // Get the Ad Unit ID for the current platform:
+        // Get the Ad Unit ID for the current platform:d 
         _adUnitId = (Application.platform == RuntimePlatform.IPhonePlayer)
             ? _iOsAdUnitId
             : _androidAdUnitId;
@@ -53,3 +54,4 @@ public class InterstitialAdExample : MonoBehaviour, IUnityAdsLoadListener, IUnit
     public void OnUnityAdsShowClick(string _adUnitId) { }
     public void OnUnityAdsShowComplete(string _adUnitId, UnityAdsShowCompletionState showCompletionState) { }
 }
+#endif

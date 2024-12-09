@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 
+#if UNITY_ANDROID || UNITY_IOS || UNITY_EDITOR // Ensure this script is only compiled for supported platforms
 public class BannerAdExample : MonoBehaviour
 {
     // For the purpose of this example, these buttons are for functionality testing:
@@ -106,3 +107,4 @@ public class BannerAdExample : MonoBehaviour
         _hideBannerButton.onClick.RemoveAllListeners();
     }
 }
+#endif

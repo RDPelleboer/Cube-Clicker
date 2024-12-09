@@ -15,8 +15,9 @@ public class AudioManager : MonoBehaviour
 
     public GameObject[] buttons;
     private SpriteRenderer spriteRenderer;
-    public Color activeColour = Color.red; // Color when touch begins
-    public Color inactiveColour = Color.white; // Color when touch ends
+    public Color activeColour = Color.red; 
+    public Color midColour = Color.yellow; 
+    public Color inactiveColour = Color.white; 
 
     void Start()
     {
@@ -42,7 +43,7 @@ public class AudioManager : MonoBehaviour
                 interval = interval - 0.1f;
                 counter = 0;
             }
-            Debug.Log(interval);
+            //Debug.Log(interval);
 
             nextPlayTime = Time.time + interval; // Reset the timer
         }
@@ -56,7 +57,7 @@ public class AudioManager : MonoBehaviour
         //Play audio clip
         audioSource.clip = audioClips[randomIndex];
         audioSource.Play();
-        Debug.Log("Play" + audioClips[randomIndex]);
+        //Debug.Log("Play" + audioClips[randomIndex]);
 
         //Choose and change random button
         if (randomIndex == 0)
